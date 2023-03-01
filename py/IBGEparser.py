@@ -80,9 +80,4 @@ for line in Path(DATA).open():
         line_data[fieldname] = value
     data.append(line_data)
 
-# Salva dados parseados em csv
-keys = data[0].keys()
-with open(OUTPUT_FILE, 'w') as f:
-    writer = csv.DictWriter(f, keys)
-    writer.writeheader()
-    writer.writerows(data)
+
